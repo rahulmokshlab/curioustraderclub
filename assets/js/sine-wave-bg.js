@@ -79,7 +79,7 @@
             ctx.lineWidth   = 1.2;
             ctx.strokeStyle = 'rgba(' + color + ', ' + l.op + ')';
 
-            var step = 3; // pixel step — balance quality vs perf
+            var step = Math.max(2, Math.round(3 / dpr)); // dpr-aware step for quality vs perf
             for (var x = 0; x <= W; x += step) {
                 var y = midY + Math.sin(x * freq + time * l.s + l.ph) * amp;
                 if (x === 0) {
