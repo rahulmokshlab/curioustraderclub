@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curious Trader Crypto – Hotlink Tester</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #0f0f0f; color: #f0f0f0; font-family: Arial, sans-serif; padding: 24px 16px; }
+        h1 { text-align: center; font-size: 22px; margin-bottom: 6px; color: #f5a623; }
+        p.subtitle { text-align: center; font-size: 13px; color: #888; margin-bottom: 28px; line-height: 1.6; }
+
+        table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        thead tr { background: #1a1a1a; }
+        thead th { padding: 10px 12px; text-align: left; color: #f5a623; font-size: 11px;
+                   text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #2e2e2e; }
+        tbody tr { border-bottom: 1px solid #1e1e1e; transition: background 0.15s; }
+        tbody tr:hover { background: #1a1a1a; }
+        tbody td { padding: 10px 12px; vertical-align: middle; }
+
+        .icon { font-size: 18px; }
+        .label { font-weight: bold; color: #f0f0f0; font-size: 13px; }
+        .scheme { font-size: 10px; color: #555; font-family: monospace; }
+
+        .section-row td { background: #111; color: #444; font-size: 10px; text-transform: uppercase;
+                          letter-spacing: 1.5px; padding: 6px 12px; }
+
+        a.app-link {
+            display: inline-block; background: #1e1e1e; border: 1px solid #2e2e2e;
+            border-radius: 8px; padding: 7px 14px; text-decoration: none;
+            color: #60a5fa; font-family: monospace; font-size: 11px; word-break: break-all;
+            transition: background 0.15s, border-color 0.15s;
+        }
+        a.app-link:hover { background: #252525; border-color: #3e3e3e; }
+
+        a.web-link {
+            display: inline-block; background: #1a2a1a; border: 1px solid #2a3a2a;
+            border-radius: 8px; padding: 7px 14px; text-decoration: none;
+            color: #4ade80; font-family: monospace; font-size: 11px; word-break: break-all;
+            transition: background 0.15s, border-color 0.15s;
+        }
+        a.web-link:hover { background: #1f321f; border-color: #3a5a3a; }
+
+        .badge-free { background: #1a2a3a; color: #60a5fa; border: 1px solid #2a4a6a;
+                      border-radius: 4px; padding: 2px 7px; font-size: 10px; }
+        .badge-paid { background: #2a1a1a; color: #f87171; border: 1px solid #4a2a2a;
+                      border-radius: 4px; padding: 2px 7px; font-size: 10px; }
+
+        .legend { display: flex; gap: 16px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
+        .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #888; }
+        .dot-blue { width: 10px; height: 10px; border-radius: 2px; background: #1e3a5f; border: 1px solid #60a5fa; }
+        .dot-green { width: 10px; height: 10px; border-radius: 2px; background: #1a2a1a; border: 1px solid #4ade80; }
+
+        @media (max-width: 600px) {
+            table, thead, tbody, tr, th, td { display: block; }
+            thead { display: none; }
+            tbody tr { margin-bottom: 12px; background: #1a1a1a; border-radius: 10px;
+                       border: 1px solid #2e2e2e; padding: 12px; }
+            tbody td { border: none; padding: 5px 0; }
+            .section-row { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🔗 Curious Trader Crypto — Hotlink Tester</h1>
+    <p class="subtitle">
+        <strong style="color:#60a5fa">Blue</strong> = deep link (opens app, use on Android device in Chrome)<br>
+        <strong style="color:#4ade80">Green</strong> = web URL (opens in browser, works anywhere)
+    </p>
+
+    <div class="legend">
+        <div class="legend-item"><div class="dot-blue"></div> App deep link</div>
+        <div class="legend-item"><div class="dot-green"></div> Direct web URL</div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Page</th>
+                <th>App Deep Link</th>
+                <th>Web URL</th>
+                <th>Auth</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <!-- ── Homepage ── -->
+            <tr class="section-row"><td colspan="5">Homepage</td></tr>
+            <tr>
+                <td class="icon">🚀</td>
+                <td><span class="label">Homepage</span></td>
+                <td><a class="app-link" href="curioustradercrypto://">curioustradercrypto://</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com?app_key=curioustradercrypto" target="_blank">prod-crypto.mokshlab.com</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+
+            <!-- ── EOD ── -->
+            <tr class="section-row"><td colspan="5">EOD</td></tr>
+            <tr>
+                <td class="icon">📈</td>
+                <td><span class="label">EOD</span></td>
+                <td><a class="app-link" href="curioustradercrypto://eod">curioustradercrypto://eod</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/eod?app_key=curioustradercrypto" target="_blank">/eod</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">📈</td>
+                <td><span class="label">EOD Quiz 9</span></td>
+                <td><a class="app-link" href="curioustradercrypto://eod/9">curioustradercrypto://eod/9</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/eod/9?app_key=curioustradercrypto" target="_blank">/eod/9</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">📈</td>
+                <td><span class="label">EOD Quiz 12</span></td>
+                <td><a class="app-link" href="curioustradercrypto://eod/12">curioustradercrypto://eod/12</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/eod/12?app_key=curioustradercrypto" target="_blank">/eod/12</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">📈</td>
+                <td><span class="label">EOD Quiz 15</span></td>
+                <td><a class="app-link" href="curioustradercrypto://eod/15">curioustradercrypto://eod/15</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/eod/15?app_key=curioustradercrypto" target="_blank">/eod/15</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">📈</td>
+                <td><span class="label">EOD Quiz 18</span></td>
+                <td><a class="app-link" href="curioustradercrypto://eod/18">curioustradercrypto://eod/18</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/eod/18?app_key=curioustradercrypto" target="_blank">/eod/18</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+
+            <!-- ── Overnight ── -->
+            <tr class="section-row"><td colspan="5">Overnight</td></tr>
+            <tr>
+                <td class="icon">🌙</td>
+                <td><span class="label">Overnight</span></td>
+                <td><a class="app-link" href="curioustradercrypto://overnight">curioustradercrypto://overnight</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/overnight?app_key=curioustradercrypto" target="_blank">/overnight</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">🌙</td>
+                <td><span class="label">Overnight Quiz 9</span></td>
+                <td><a class="app-link" href="curioustradercrypto://overnight/9">curioustradercrypto://overnight/9</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/overnight/9?app_key=curioustradercrypto" target="_blank">/overnight/9</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">🌙</td>
+                <td><span class="label">Overnight Quiz 12</span></td>
+                <td><a class="app-link" href="curioustradercrypto://overnight/12">curioustradercrypto://overnight/12</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/overnight/12?app_key=curioustradercrypto" target="_blank">/overnight/12</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">🌙</td>
+                <td><span class="label">Overnight Quiz 15</span></td>
+                <td><a class="app-link" href="curioustradercrypto://overnight/15">curioustradercrypto://overnight/15</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/overnight/15?app_key=curioustradercrypto" target="_blank">/overnight/15</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">🌙</td>
+                <td><span class="label">Overnight Quiz 18</span></td>
+                <td><a class="app-link" href="curioustradercrypto://overnight/18">curioustradercrypto://overnight/18</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/overnight/18?app_key=curioustradercrypto" target="_blank">/overnight/18</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+
+            <!-- ── Minute Bucket ── -->
+            <tr class="section-row"><td colspan="5">Minute Bucket</td></tr>
+            <tr>
+                <td class="icon">⏱️</td>
+                <td><span class="label">Minute Bucket</span></td>
+                <td><a class="app-link" href="curioustradercrypto://minutebucket">curioustradercrypto://minutebucket</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/minutebucket?app_key=curioustradercrypto" target="_blank">/minutebucket</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">⏱️</td>
+                <td><span class="label">MB 15-min</span></td>
+                <td><a class="app-link" href="curioustradercrypto://minutebucket/15">curioustradercrypto://minutebucket/15</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/minutebucket/15?app_key=curioustradercrypto" target="_blank">/minutebucket/15</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">⏱️</td>
+                <td><span class="label">MB 30-min</span></td>
+                <td><a class="app-link" href="curioustradercrypto://minutebucket/30">curioustradercrypto://minutebucket/30</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/minutebucket/30?app_key=curioustradercrypto" target="_blank">/minutebucket/30</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">⏱️</td>
+                <td><span class="label">MB 60-min</span></td>
+                <td><a class="app-link" href="curioustradercrypto://minutebucket/60">curioustradercrypto://minutebucket/60</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/minutebucket/60?app_key=curioustradercrypto" target="_blank">/minutebucket/60</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">⏱️</td>
+                <td><span class="label">MB 180-min</span></td>
+                <td><a class="app-link" href="curioustradercrypto://minutebucket/180">curioustradercrypto://minutebucket/180</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/minutebucket/180?app_key=curioustradercrypto" target="_blank">/minutebucket/180</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">⏱️</td>
+                <td><span class="label">MB 360-min</span></td>
+                <td><a class="app-link" href="curioustradercrypto://minutebucket/360">curioustradercrypto://minutebucket/360</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/minutebucket/360?app_key=curioustradercrypto" target="_blank">/minutebucket/360</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">⏱️</td>
+                <td><span class="label">MB 720-min</span></td>
+                <td><a class="app-link" href="curioustradercrypto://minutebucket/720">curioustradercrypto://minutebucket/720</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/minutebucket/720?app_key=curioustradercrypto" target="_blank">/minutebucket/720</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+
+            <!-- ── Reporting ── -->
+            <tr class="section-row"><td colspan="5">Reporting</td></tr>
+            <tr>
+                <td class="icon">📊</td>
+                <td><span class="label">Reporting</span></td>
+                <td><a class="app-link" href="curioustradercrypto://reporting">curioustradercrypto://reporting</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/reporting?app_key=curioustradercrypto" target="_blank">/reporting</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+
+            <!-- ── Shadow Trade ── -->
+            <tr class="section-row"><td colspan="5">Shadow Trade</td></tr>
+            <tr>
+                <td class="icon">👤</td>
+                <td><span class="label">Shadow Trade</span></td>
+                <td><a class="app-link" href="curioustradercrypto://shadowtrade">curioustradercrypto://shadowtrade</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/shadowtrade?app_key=curioustradercrypto" target="_blank">/shadowtrade</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">📉</td>
+                <td><span class="label">Futures</span></td>
+                <td><a class="app-link" href="curioustradercrypto://shadowtrade/futures">curioustradercrypto://shadowtrade/futures</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/shadowtrade/futures?app_key=curioustradercrypto" target="_blank">/shadowtrade/futures</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+            <tr>
+                <td class="icon">🔄</td>
+                <td><span class="label">Intraday</span></td>
+                <td><a class="app-link" href="curioustradercrypto://shadowtrade/intraday">curioustradercrypto://shadowtrade/intraday</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/shadowtrade/intraday?app_key=curioustradercrypto" target="_blank">/shadowtrade/intraday</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+
+            <!-- ── Settings ── -->
+            <tr class="section-row"><td colspan="5">Settings</td></tr>
+            <tr>
+                <td class="icon">⚙️</td>
+                <td><span class="label">Settings</span></td>
+                <td><a class="app-link" href="curioustradercrypto://global_settings">curioustradercrypto://global_settings</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/global_settings?app_key=curioustradercrypto" target="_blank">/global_settings</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+
+            <!-- ── Volatile Markets ── -->
+            <tr class="section-row"><td colspan="5">Volatile Markets</td></tr>
+            <tr>
+                <td class="icon">⚡</td>
+                <td><span class="label">Volatile Markets</span></td>
+                <td><a class="app-link" href="curioustradercrypto://volatilemarkets">curioustradercrypto://volatilemarkets</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/volatilemarkets?app_key=curioustradercrypto" target="_blank">/volatilemarkets</a></td>
+                <td><span class="badge-paid">Paid</span></td>
+            </tr>
+
+            <!-- ── Auth ── -->
+            <tr class="section-row"><td colspan="5">Auth — No Subscription Required</td></tr>
+            <tr>
+                <td class="icon">🔑</td>
+                <td><span class="label">Login</span></td>
+                <td><a class="app-link" href="curioustradercrypto://login">curioustradercrypto://login</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/login?app_key=curioustradercrypto" target="_blank">/login</a></td>
+                <td><span class="badge-free">Free</span></td>
+            </tr>
+            <tr>
+                <td class="icon">✍️</td>
+                <td><span class="label">Sign Up</span></td>
+                <td><a class="app-link" href="curioustradercrypto://signup">curioustradercrypto://signup</a></td>
+                <td><a class="web-link" href="https://prod-crypto.mokshlab.com/signup?app_key=curioustradercrypto" target="_blank">/signup</a></td>
+                <td><span class="badge-free">Free</span></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <p style="text-align:center; font-size:11px; color:#333; margin-top:32px;">
+        prod-crypto.mokshlab.com · app_key=curioustradercrypto · 27 links
+    </p>
+
+</body>
+</html>
+

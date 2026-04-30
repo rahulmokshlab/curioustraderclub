@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curious Trader Forex – Deep Link Tester</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #0f0f0f; color: #f0f0f0; font-family: Arial, sans-serif; padding: 24px 16px 48px; }
+        h1 { text-align: center; font-size: 22px; margin-bottom: 6px; color: #f5a623; }
+        p.subtitle { text-align: center; font-size: 13px; color: #888; margin-bottom: 32px; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+        a.btn {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px;
+            padding: 16px 10px; text-decoration: none; color: #f0f0f0; text-align: center;
+            transition: background 0.15s;
+        }
+        a.btn:active { background: #2a2a2a; }
+        a.btn .icon  { font-size: 26px; margin-bottom: 6px; }
+        a.btn .label { font-size: 13px; font-weight: bold; margin-bottom: 3px; }
+        a.btn .scheme{ font-size: 9px; color: #555; word-break: break-all; }
+        a.btn.full   { grid-column: span 2; }
+        a.btn.free   { border-color: #1e3a1e; }
+        a.btn.free .label { color: #4ade80; }
+
+        .section {
+            grid-column: span 2;
+            display: flex; align-items: center; gap: 10px;
+            margin-top: 18px; margin-bottom: 2px;
+        }
+        .section span { font-size: 10px; text-transform: uppercase; letter-spacing: 1.2px; color: #444; white-space: nowrap; }
+        .section hr { flex: 1; border: none; border-top: 1px solid #222; }
+
+        .legend { grid-column: span 2; display: flex; gap: 16px; justify-content: center; margin-bottom: 4px; font-size: 11px; color: #555; }
+        .legend span { display: flex; align-items: center; gap: 4px; }
+        .dot-green { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; }
+        .dot-gray  { width: 8px; height: 8px; border-radius: 50%; background: #555; }
+
+        footer { text-align: center; font-size: 10px; color: #333; margin-top: 32px; }
+    </style>
+</head>
+<body>
+
+<h1>🔗 Curious Trader Forex</h1>
+<p class="subtitle">
+    Open this page in <strong>Chrome</strong> on your Android device.<br>
+    Tap a button to fire the deep link. App must be installed.
+</p>
+
+<div class="grid">
+
+    <div class="legend">
+        <span><span class="dot-green"></span> Free (no subscription)</span>
+        <span><span class="dot-gray"></span> Requires subscription</span>
+    </div>
+
+    <!-- App Root -->
+    <div class="section"><hr><span>App Root</span><hr></div>
+    <a class="btn full free" href="curioustraderforex://">
+        <span class="icon">🚀</span>
+        <span class="label">Open App (Homepage)</span>
+        <span class="scheme">curioustraderforex://</span>
+    </a>
+
+    <!-- Auth -->
+    <div class="section"><hr><span>Auth</span><hr></div>
+    <a class="btn free" href="curioustraderforex://login">
+        <span class="icon">🔑</span>
+        <span class="label">Login</span>
+        <span class="scheme">curioustraderforex://login</span>
+    </a>
+    <a class="btn free" href="curioustraderforex://signup">
+        <span class="icon">✍️</span>
+        <span class="label">Sign Up</span>
+        <span class="scheme">curioustraderforex://signup</span>
+    </a>
+
+    <!-- Main Pages -->
+    <div class="section"><hr><span>Main Pages</span><hr></div>
+    <a class="btn" href="curioustraderforex://eod">
+        <span class="icon">📈</span>
+        <span class="label">EOD</span>
+        <span class="scheme">curioustraderforex://eod</span>
+    </a>
+    <a class="btn" href="curioustraderforex://overnight">
+        <span class="icon">🌙</span>
+        <span class="label">Overnight</span>
+        <span class="scheme">curioustraderforex://overnight</span>
+    </a>
+    <a class="btn" href="curioustraderforex://minutebucket">
+        <span class="icon">⏱️</span>
+        <span class="label">Minute Bucket</span>
+        <span class="scheme">curioustraderforex://minutebucket</span>
+    </a>
+    <a class="btn" href="curioustraderforex://volatilemarkets">
+        <span class="icon">⚡</span>
+        <span class="label">Volatile Markets</span>
+        <span class="scheme">curioustraderforex://volatilemarkets</span>
+    </a>
+    <a class="btn" href="curioustraderforex://reporting">
+        <span class="icon">📊</span>
+        <span class="label">Reporting</span>
+        <span class="scheme">curioustraderforex://reporting</span>
+    </a>
+    <a class="btn" href="curioustraderforex://settings">
+        <span class="icon">⚙️</span>
+        <span class="label">Settings</span>
+        <span class="scheme">curioustraderforex://settings</span>
+    </a>
+
+    <!-- EOD Sub-routes -->
+    <div class="section"><hr><span>EOD — Quiz Sub-routes</span><hr></div>
+    <a class="btn" href="curioustraderforex://eod/9">
+        <span class="icon">📈</span>
+        <span class="label">EOD Quiz 9</span>
+        <span class="scheme">curioustraderforex://eod/9</span>
+    </a>
+    <a class="btn" href="curioustraderforex://eod/12">
+        <span class="icon">📈</span>
+        <span class="label">EOD Quiz 12</span>
+        <span class="scheme">curioustraderforex://eod/12</span>
+    </a>
+    <a class="btn" href="curioustraderforex://eod/15">
+        <span class="icon">📈</span>
+        <span class="label">EOD Quiz 15</span>
+        <span class="scheme">curioustraderforex://eod/15</span>
+    </a>
+    <a class="btn" href="curioustraderforex://eod/18">
+        <span class="icon">📈</span>
+        <span class="label">EOD Quiz 18</span>
+        <span class="scheme">curioustraderforex://eod/18</span>
+    </a>
+
+    <!-- Overnight Sub-routes -->
+    <div class="section"><hr><span>Overnight — Quiz Sub-routes</span><hr></div>
+    <a class="btn" href="curioustraderforex://overnight/9">
+        <span class="icon">🌙</span>
+        <span class="label">Overnight Quiz 9</span>
+        <span class="scheme">curioustraderforex://overnight/9</span>
+    </a>
+    <a class="btn" href="curioustraderforex://overnight/12">
+        <span class="icon">🌙</span>
+        <span class="label">Overnight Quiz 12</span>
+        <span class="scheme">curioustraderforex://overnight/12</span>
+    </a>
+    <a class="btn" href="curioustraderforex://overnight/15">
+        <span class="icon">🌙</span>
+        <span class="label">Overnight Quiz 15</span>
+        <span class="scheme">curioustraderforex://overnight/15</span>
+    </a>
+    <a class="btn" href="curioustraderforex://overnight/18">
+        <span class="icon">🌙</span>
+        <span class="label">Overnight Quiz 18</span>
+        <span class="scheme">curioustraderforex://overnight/18</span>
+    </a>
+
+    <!-- Minute Bucket Sub-routes -->
+    <div class="section"><hr><span>Minute Bucket — Sub-routes</span><hr></div>
+    <a class="btn" href="curioustraderforex://minutebucket/15">
+        <span class="icon">⏱️</span>
+        <span class="label">MB 15-min</span>
+        <span class="scheme">curioustraderforex://minutebucket/15</span>
+    </a>
+    <a class="btn" href="curioustraderforex://minutebucket/30">
+        <span class="icon">⏱️</span>
+        <span class="label">MB 30-min</span>
+        <span class="scheme">curioustraderforex://minutebucket/30</span>
+    </a>
+    <a class="btn" href="curioustraderforex://minutebucket/60">
+        <span class="icon">⏱️</span>
+        <span class="label">MB 60-min</span>
+        <span class="scheme">curioustraderforex://minutebucket/60</span>
+    </a>
+    <a class="btn" href="curioustraderforex://minutebucket/180">
+        <span class="icon">⏱️</span>
+        <span class="label">MB 180-min</span>
+        <span class="scheme">curioustraderforex://minutebucket/180</span>
+    </a>
+    <a class="btn" href="curioustraderforex://minutebucket/360">
+        <span class="icon">⏱️</span>
+        <span class="label">MB 360-min</span>
+        <span class="scheme">curioustraderforex://minutebucket/360</span>
+    </a>
+    <a class="btn" href="curioustraderforex://minutebucket/720">
+        <span class="icon">⏱️</span>
+        <span class="label">MB 720-min</span>
+        <span class="scheme">curioustraderforex://minutebucket/720</span>
+    </a>
+
+    <!-- Shadow Trade -->
+    <div class="section"><hr><span>Shadow Trade</span><hr></div>
+    <a class="btn full" href="curioustraderforex://shadowtrade">
+        <span class="icon">👤</span>
+        <span class="label">Shadow Trade</span>
+        <span class="scheme">curioustraderforex://shadowtrade</span>
+    </a>
+    <a class="btn" href="curioustraderforex://shadowtrade/intraday">
+        <span class="icon">🔄</span>
+        <span class="label">Intraday</span>
+        <span class="scheme">curioustraderforex://shadowtrade/intraday</span>
+    </a>
+    <a class="btn" href="curioustraderforex://shadowtrade/futures">
+        <span class="icon">📉</span>
+        <span class="label">Futures</span>
+        <span class="scheme">curioustraderforex://shadowtrade/futures</span>
+    </a>
+
+</div>
+
+<footer>
+    prod-forex.mokshlab.com · app_key=curioustraderforex · 26 deep links total
+</footer>
+
+</body>
+</html>

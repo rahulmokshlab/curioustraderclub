@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        window.onload = function () {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                // Redirect to iOS App Store
+                window.location.href = "https://apps.apple.com/us/app/curious-trader-crypto/id6740856510";
+            } else if (/android/i.test(userAgent)) {
+                // Redirect to Google Play Store
+                window.location.href = "https://play.google.com/store/apps/details?id=com.mokshlab.curioustrader_crypto";
+            } else {
+                document.body.innerHTML = "<h1>Please open this page on a mobile device.</h1>";
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+</body>
+</html>

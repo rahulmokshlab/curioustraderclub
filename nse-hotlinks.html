@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curious Trader NSE – Deep Link Tester</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #0f0f0f; color: #f0f0f0; font-family: Arial, sans-serif; padding: 24px 16px; }
+        h1 { text-align: center; font-size: 22px; margin-bottom: 6px; color: #f5a623; }
+        p.subtitle { text-align: center; font-size: 13px; color: #888; margin-bottom: 28px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        a.btn {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: #1e1e1e; border: 1px solid #2e2e2e; border-radius: 12px;
+            padding: 18px 12px; text-decoration: none; color: #f0f0f0; text-align: center;
+        }
+        a.btn .icon { font-size: 28px; margin-bottom: 8px; }
+        a.btn .label { font-size: 14px; font-weight: bold; margin-bottom: 4px; }
+        a.btn .scheme { font-size: 10px; color: #555; word-break: break-all; }
+        a.btn.full-width { grid-column: span 2; }
+        .section-title {
+            grid-column: span 2; text-align: center; font-size: 11px;
+            text-transform: uppercase; letter-spacing: 1px; color: #444;
+            margin-top: 8px; margin-bottom: -4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔗 Curious Trader NSE</h1>
+    <p class="subtitle">Tap a button to test each deep link.<br>Open this page in <strong>Chrome</strong> on your Android device.<br>The app must be installed.</p>
+
+    <div class="grid">
+
+        <a class="btn full-width" href="curioustradernse://">
+            <span class="icon">🚀</span>
+            <span class="label">Open App (Homepage)</span>
+            <span class="scheme">curioustradernse://</span>
+        </a>
+
+        <p class="section-title">Main Pages</p>
+
+        <a class="btn" href="curioustradernse://eod">
+            <span class="icon">📈</span>
+            <span class="label">EOD</span>
+            <span class="scheme">curioustradernse://eod</span>
+        </a>
+
+        <a class="btn" href="curioustradernse://overnight">
+            <span class="icon">🌙</span>
+            <span class="label">Overnight</span>
+            <span class="scheme">curioustradernse://overnight</span>
+        </a>
+
+        <a class="btn" href="curioustradernse://minutebucket">
+            <span class="icon">⏱️</span>
+            <span class="label">Minute Bucket</span>
+            <span class="scheme">curioustradernse://minutebucket</span>
+        </a>
+
+        <a class="btn" href="curioustradernse://shadowtrade">
+            <span class="icon">👤</span>
+            <span class="label">Shadow Trade</span>
+            <span class="scheme">curioustradernse://shadowtrade</span>
+        </a>
+
+        <a class="btn" href="curioustradernse://volatilemarkets">
+            <span class="icon">⚡</span>
+            <span class="label">Volatile Markets</span>
+            <span class="scheme">curioustradernse://volatilemarkets</span>
+        </a>
+
+        <a class="btn" href="curioustradernse://reporting">
+            <span class="icon">📊</span>
+            <span class="label">Reporting</span>
+            <span class="scheme">curioustradernse://reporting</span>
+        </a>
+
+        <a class="btn" href="curioustradernse://settings">
+            <span class="icon">⚙️</span>
+            <span class="label">Global Settings</span>
+            <span class="scheme">curioustradernse://settings</span>
+        </a>
+
+        <p class="section-title">EOD Sub-routes</p>
+
+        <a class="btn" href="curioustradernse://eod/11">
+            <span class="icon">📈</span>
+            <span class="label">EOD Quiz 11</span>
+            <span class="scheme">curioustradernse://eod/11</span>
+        </a>
+
+        <a class="btn" href="curioustradernse://eod/13">
+            <span class="icon">📈</span>
+            <span class="label">EOD Quiz 13</span>
+            <span class="scheme">curioustradernse://eod/13</span>
+        </a>
+
+        <p class="section-title">Overnight Sub-routes</p>
+
+        <a class="btn" href="curioustradernse://overnight/11">
+            <span class="icon">🌙</span>
+            <span class="label">Overnight Quiz 11</span>
+            <span class="scheme">curioustradernse://overnight/11</span>
+        </a>
+
+        <a class="btn" href="curioustradernse://overnight/13">
+            <span class="icon">🌙</span>
+            <span class="label">Overnight Quiz 13</span>
+            <span class="scheme">curioustradernse://overnight/13</span>
+        </a>
+
+        <a class="btn full-width" href="curioustradernse://overnight/15">
+            <span class="icon">🌙</span>
+            <span class="label">Overnight Quiz 15</span>
+            <span class="scheme">curioustradernse://overnight/15</span>
+        </a>
+
+        <p class="section-title">Minute Bucket Sub-routes</p>
+
+        <a class="btn" href="curioustradernse://minutebucket/15">
+            <span class="icon">⏱️</span>
+            <span class="label">MB 15-min</span>
+            <span class="scheme">curioustradernse://minutebucket/15</span>
+        </a>
+
+        <a class="btn" href="curioustradernse://minutebucket/30">
+            <span class="icon">⏱️</span>
+            <span class="label">MB 30-min</span>
+            <span class="scheme">curioustradernse://minutebucket/30</span>
+        </a>
+
+        <a class="btn full-width" href="curioustradernse://minutebucket/60">
+            <span class="icon">⏱️</span>
+            <span class="label">MB 60-min</span>
+            <span class="scheme">curioustradernse://minutebucket/60</span>
+        </a>
+
+        <p class="section-title">Shadow Trade Sub-routes</p>
+
+        <a class="btn" href="curioustradernse://shadowtrade/futures">
+            <span class="icon">📉</span>
+            <span class="label">Futures</span>
+            <span class="scheme">curioustradernse://shadowtrade/futures</span>
+        </a>
+
+        <a class="btn" href="curioustradernse://shadowtrade/intraday">
+            <span class="icon">🔄</span>
+            <span class="label">Intraday</span>
+            <span class="scheme">curioustradernse://shadowtrade/intraday</span>
+        </a>
+
+        <p class="section-title">Auth</p>
+
+        <a class="btn" href="curioustradernse://login">
+            <span class="icon">🔑</span>
+            <span class="label">Login</span>
+            <span class="scheme">curioustradernse://login</span>
+        </a>
+
+        <a class="btn" href="curioustradernse://signup">
+            <span class="icon">✍️</span>
+            <span class="label">Sign Up</span>
+            <span class="scheme">curioustradernse://signup</span>
+        </a>
+
+    </div>
+
+    <p style="text-align:center; font-size:11px; color:#333; margin-top:32px;">
+        prod-nse.mokshlab.com · app_scheme=curioustradernse
+    </p>
+</body>
+</html>
