@@ -1397,9 +1397,9 @@ function buildModules(exchange) {
     html += '<div class="canva-embed-block">';
     html += '<div class="canva-embed-label">Expanded product walkthrough</div>';
     html += '<div class="canva-embed-wrapper">';
-    html += '<iframe src="' + ex.canvaUrl + '" title="Curious Trader ' + ex.label + ' — expanded product walkthrough" loading="lazy" allowfullscreen></iframe>';
+    html += '<iframe src="' + ex.canvaUrl + '" title="Curious Trader ' + ex.label + ' — expanded product walkthrough" loading="lazy" allowfullscreen sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>';
     html += '</div>';
-    html += '<a href="' + ex.canvaUrl + '" class="canva-open-link" target="_blank" rel="noopener">Open ' + ex.label + ' demo deck on Canva ↗</a>';
+    html += '<a href="' + ex.canvaUrl + '" class="canva-open-link" target="_blank" rel="noopener noreferrer">Open ' + ex.label + ' demo deck on Canva ↗</a>';
     html += '</div>';
     modulesDef.forEach(function (m) {
         html += '<div class="module-card' + (m.open ? ' open' : '') + '">';
