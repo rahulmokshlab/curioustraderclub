@@ -453,6 +453,38 @@
         .modules-section.visible { display: block; animation: fadeUp 0.45s ease; }
         @keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
 
+        /* ═══ CANVA EMBED ═══ */
+        .canva-embed-block {
+            margin-bottom: 2.5rem;
+        }
+        .canva-embed-label {
+            font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
+            text-transform: uppercase; color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+        .canva-embed-wrapper {
+            position: relative; width: 100%; padding-top: 56.25%; /* 16:9 */
+            border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+            background: var(--surface);
+        }
+        .canva-embed-wrapper iframe {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            border: none;
+        }
+        .canva-open-link {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            margin-top: 0.85rem; padding: 0.55rem 1.25rem;
+            background: var(--surface); border: 1.5px solid var(--border);
+            border-radius: 50px; font-size: 0.84rem; font-weight: 600;
+            color: var(--text); text-decoration: none;
+            transition: border-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: var(--card-shadow);
+        }
+        .canva-open-link:hover {
+            border-color: var(--accent); color: var(--accent);
+            transform: translateY(-2px); box-shadow: var(--card-shadow-hover);
+        }
+
         .download-bar {
             background: var(--surface); border: 1.5px solid var(--accent);
             border-radius: 16px; padding: 1.5rem 2rem;
@@ -1279,6 +1311,7 @@ function toggleTheme() {
 var exchanges = {
     forex: {
         label: 'Forex',
+        canvaUrl: 'https://canva.link/95l3ap1pdsomkky',
         playStore: 'https://play.google.com/store/apps/details?id=com.mokshlab.curioustrader_forex',
         appStore: 'https://apps.apple.com/us/app/curious-trader-forex/id6740856453',
         ticker: 'EUR/USD', tickerAlt: 'GBP/JPY', currency: '$',
@@ -1289,6 +1322,7 @@ var exchanges = {
     },
     crypto: {
         label: 'Crypto',
+        canvaUrl: 'https://canva.link/dl8jv85w305cv19',
         playStore: 'https://play.google.com/store/apps/details?id=com.mokshlab.curioustrader_crypto',
         appStore: 'https://apps.apple.com/us/app/curious-trader-crypto/id6740856510',
         ticker: 'BTC/USDT', tickerAlt: 'ETH/USDT', currency: '$',
@@ -1299,6 +1333,7 @@ var exchanges = {
     },
     nse: {
         label: 'NSE India',
+        canvaUrl: 'https://canva.link/n5gathguflh0f35',
         playStore: 'https://play.google.com/store/apps/details?id=com.mokshlab.curioustrader_nse',
         appStore: 'https://apps.apple.com/us/app/curious-trader-nse/id6737322109',
         ticker: 'RELIANCE', tickerAlt: 'TCS', currency: '₹',
@@ -1358,6 +1393,14 @@ function buildModules(exchange) {
     var html = '<div class="section-label">' + ex.label + ' — Modules</div>';
     html += '<div class="section-title">Everything Inside the App</div>';
     html += '<p class="section-sub">6 training modules with quiz-based learning and paper trading simulation.</p>';
+    /* ── Canva walkthrough embed ── */
+    html += '<div class="canva-embed-block">';
+    html += '<div class="canva-embed-label">Expanded product walkthrough</div>';
+    html += '<div class="canva-embed-wrapper">';
+    html += '<iframe src="' + ex.canvaUrl + '" title="Curious Trader ' + ex.label + ' — expanded product walkthrough" loading="lazy" allowfullscreen></iframe>';
+    html += '</div>';
+    html += '<a href="' + ex.canvaUrl + '" class="canva-open-link" target="_blank" rel="noopener">Open ' + ex.label + ' demo deck on Canva ↗</a>';
+    html += '</div>';
     modulesDef.forEach(function (m) {
         html += '<div class="module-card' + (m.open ? ' open' : '') + '">';
         html += '<div class="module-header" onclick="toggleModule(this)" role="button" tabindex="0" aria-expanded="' + (m.open ? 'true' : 'false') + '" onkeydown="if(event.key===\'Enter\'||event.key===\' \')toggleModule(this)">';
